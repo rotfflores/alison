@@ -71,13 +71,13 @@ button { font: inherit; }
   border-radius: 47% 47% 45% 45% / 41% 41% 45% 45%;
 }
 
-.swans { position: absolute; inset: 9.2% 9% auto; height: 50%; z-index: 2; }
-.swan { position: absolute; top: 0; width: 61%; height: 100%; object-fit: contain; }
+.swans { position: absolute; inset: 9.2% 9% auto; height: 50%; z-index: 2; transform: translateX(7%); }
+.swan { position: absolute; top: 0; width: 61%; height: 100%; object-fit: contain; filter: drop-shadow(5px 8px 7px rgba(68, 57, 49, .24)); }
 .swan--left { left: -1%; }
 .swan--right { right: -1%; }
 
-.calla { position: absolute; z-index: 6; left: -1%; bottom: 1%; width: 37%; height: 66%; object-fit: contain; transform: rotate(-5deg); transform-origin: bottom; }
-.pearls { position: absolute; z-index: 4; width: 62%; right: -3%; bottom: .5%; transform: rotate(-10deg); mix-blend-mode: multiply; opacity: .94; }
+.calla { position: absolute; z-index: 6; left: -4%; bottom: 0; width: 46%; height: 75%; object-fit: contain; transform: rotate(-5deg); transform-origin: bottom; filter: drop-shadow(3px 7px 5px rgba(65, 61, 42, .18)); }
+.pearls { position: absolute; z-index: 4; width: 73%; right: -8%; bottom: 6%; transform: rotate(-10deg); mix-blend-mode: multiply; opacity: .96; }
 
 .invitation-trigger {
   position: absolute;
@@ -120,8 +120,8 @@ button { font: inherit; }
   position: absolute;
   z-index: 8;
   left: 50%;
-  bottom: 7.8%;
-  width: 14%;
+  bottom: 12.5%;
+  width: 17%;
   aspect-ratio: 1;
   padding: 0;
   border: 0;
