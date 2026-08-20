@@ -177,16 +177,15 @@ button { font: inherit; }
 
 .photo-booth { position: relative; width: min(72vw, 520px, calc(68svh * 1100 / 1500)); aspect-ratio: 1100 / 1500; margin-top: -4px; }
 .photo-booth__frame { position: absolute; inset: 0; z-index: 2; width: 100%; height: 100%; object-fit: contain; filter: grayscale(.42) saturate(.58) brightness(1.09) drop-shadow(7px 12px 9px rgba(55,45,38,.3)); opacity: 0; transform: scale(.9); }
-.photo-booth__flower { position: absolute; z-index: 6; left: 9%; bottom: 9%; width: 34%; height: 55%; object-fit: contain; filter: drop-shadow(6px 10px 7px rgba(53,50,36,.35)); opacity: 0; transform: translateY(45px) rotate(-5deg); }
-.photo-booth__pearls { position: absolute; z-index: 5; top: 25%; right: 4%; width: 47%; object-fit: contain; filter: drop-shadow(5px 8px 6px rgba(58,49,41,.32)); opacity: 0; transform: translate(30px,-20px) rotate(-8deg); }
+.photo-booth__flower { position: absolute; z-index: 6; left: 9%; bottom: 9%; width: 34%; height: 55%; object-fit: contain; filter: drop-shadow(6px 10px 7px rgba(53,50,36,.35)); opacity: 0; transform: translateY(45px) rotate(6deg); }
+.photo-booth__pearls { position: absolute; z-index: 5; top: 25%; right: -4%; width: 47%; object-fit: contain; filter: drop-shadow(5px 8px 6px rgba(58,49,41,.32)); opacity: 0; transform: translate(30px,-20px) rotate(-8deg); }
 
-.film-strip { position: absolute; z-index: 4; top: 29%; left: 50%; width: 37%; padding: 8px 8px 4px; background: #fbfaf6; box-shadow: 7px 12px 15px rgba(47,40,35,.3); transform: translate(-50%,-4%) scaleY(.06); transform-origin: 50% 0; opacity: 0; }
-.film-strip__photo { position: relative; display: grid; width: 100%; aspect-ratio: 1.36; margin-bottom: 7px; place-items: center; overflow: hidden; color: rgba(255,255,255,.75); font-size: 10px; letter-spacing: .16em; background: #545454; }
-.film-strip__photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,255,255,.16), transparent 48%, rgba(0,0,0,.25)); }
-.film-strip__photo span { position: relative; z-index: 1; }
-.film-strip__photo--one { background: radial-gradient(circle at 35% 42%, #bbb 0 12%, transparent 13%), linear-gradient(135deg,#222,#aaa); }
-.film-strip__photo--two { background: radial-gradient(circle at 65% 38%, #c7c7c7 0 13%, transparent 14%), linear-gradient(45deg,#999,#252525); }
-.film-strip__photo--three { background: radial-gradient(circle at 45% 40%, #d3d3d3 0 14%, transparent 15%), linear-gradient(125deg,#333,#aaa); }
+.film-strip { position: absolute; z-index: 4; top: 28%; left: 50%; width: 37%; padding: 8px 8px 4px; background: #fbfaf6; box-shadow: 7px 12px 15px rgba(47,40,35,.3); transform: translate(-50%,0); clip-path: inset(0 0 100% 0); transform-origin: 50% 0; opacity: 0; }
+.film-strip__photo { position: relative; width: 100%; aspect-ratio: 1.5; margin-bottom: 7px; overflow: hidden; background-image: url("assets/fotos-pareja.png?v=24"); background-repeat: no-repeat; background-size: 100% 300%; filter: contrast(1.04); }
+.film-strip__photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,255,255,.08), transparent 52%, rgba(0,0,0,.1)); }
+.film-strip__photo--one { background-position: center top; }
+.film-strip__photo--two { background-position: center center; }
+.film-strip__photo--three { background-position: center bottom; }
 .film-strip p { margin: 4px 0 1px; color: #6e604f; font-family: "Parisienne", cursive; font-size: clamp(14px, 2vw, 20px); }
 
 .details__cta { position: relative; z-index: 10; width: min(82vw, 430px); margin-top: -8px; padding: 12px 20px; border: 0; border-radius: 3px; color: #fff; background: linear-gradient(90deg,#a68a56,#b8a16e,#9f824f); font-family: "Italiana", serif; font-size: clamp(16px, 2vw, 22px); letter-spacing: .08em; text-transform: uppercase; box-shadow: 0 9px 18px rgba(78,61,37,.2); opacity: 0; transform: translateY(16px); }
@@ -212,8 +211,8 @@ button { font: inherit; }
 @keyframes detailHeaderIn { to { opacity: 1; transform: translateY(0); } }
 @keyframes detailFrameIn { to { opacity: 1; transform: scale(1); } }
 @keyframes fadeIn { to { opacity: 1; } }
-@keyframes filmEject { 0% { opacity: 0; transform: translate(-50%,-4%) scaleY(.06); } 12% { opacity: 1; } 100% { opacity: 1; transform: translate(-50%,0) scaleY(1); } }
-@keyframes detailFlowerIn { to { opacity: 1; transform: translateY(0) rotate(-5deg); } }
+@keyframes filmEject { 0% { opacity: 1; clip-path: inset(0 0 100% 0); } 100% { opacity: 1; clip-path: inset(0 0 0 0); } }
+@keyframes detailFlowerIn { to { opacity: 1; transform: translateY(0) rotate(6deg); } }
 @keyframes detailPearlsIn { to { opacity: 1; transform: translate(0,0) rotate(-8deg); } }
 @keyframes detailCtaIn { to { opacity: 1; transform: translateY(0); } }
 
