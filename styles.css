@@ -115,9 +115,9 @@ button { font: inherit; }
   animation: letteringIn .85s 1.25s ease both;
 }
 .card--left { left: 2%; transform: rotate(-4deg); padding-right: 10%; }
-.card--right { right: 2%; transform: rotate(15deg); padding-left: 10%; }
+.card--right { right: 2%; transform: rotate(-11deg); padding-left: 10%; }
 .invitation-trigger:hover .card--left { transform: rotate(-4deg); }
-.invitation-trigger:hover .card--right { transform: rotate(15deg); }
+.invitation-trigger:hover .card--right { transform: rotate(-11deg); }
 .invitation-trigger:focus-visible { outline: 2px solid var(--gold); outline-offset: 5px; border-radius: 40%; }
 
 .pearl-button {
@@ -185,7 +185,7 @@ button { font: inherit; }
 @keyframes arrive { from { opacity: 0; transform: translateY(24px) scale(.94); } to { opacity: 1; transform: none; } }
 @keyframes pulse { 0%,100% { transform: translateX(-50%) scale(1); filter: none; } 50% { transform: translateX(-50%) scale(1.07); filter: none; } }
 @keyframes swanLeftIn { from { opacity: 0; transform: translate(-36px, -10px) rotate(-5deg); } to { opacity: 1; transform: none; } }
-@keyframes swanRightIn { from { opacity: 0; transform: translate(36px, -10px) rotate(17deg); } to { opacity: 1; transform: rotate(12deg); } }
+@keyframes swanRightIn { from { opacity: 0; transform: translate(36px, 12px) rotate(-3deg); } to { opacity: 1; transform: rotate(-8deg); } }
 @keyframes flowerIn { from { opacity: 0; transform: translateY(70px) rotate(-5deg); } to { opacity: 1; transform: translateY(0) rotate(1deg); } }
 @keyframes pearlsIn { from { opacity: 0; transform: translate(38px, -38px) rotate(-17deg); } to { opacity: .96; transform: translate(0, 0) rotate(-10deg); } }
 @keyframes letteringIn { from { opacity: 0; filter: blur(5px); } to { opacity: 1; filter: drop-shadow(5px 7px 4px rgba(68, 56, 49, .42)); } }
