@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3eff1">
+  <meta name="description" content="Una invitación muy especial está esperando por ti.">
+  <title>Nuestra boda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,500&family=Italiana&family=Parisienne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="scene">
+    <div class="glow glow--rose"></div>
+    <div class="glow glow--sage"></div>
+
+    <section class="locket" aria-label="Portada de invitación de boda">
+      <img class="locket__frame" src="assets/marco.png" alt="" draggable="false">
+
+      <div class="locket__inside">
+        <div class="swans" aria-hidden="true">
+          <img class="swan swan--left" src="assets/cisne-der.png" alt="">
+          <img class="swan swan--right" src="assets/cisne-izq.png" alt="">
+        </div>
+
+        <img class="calla" src="assets/cala.png" alt="" aria-hidden="true">
+        <img class="pearls" src="assets/perlas.png" alt="" aria-hidden="true">
+
+        <button class="invitation-trigger" type="button" aria-label="Abrir la invitación" aria-expanded="false">
+          <span class="card card--left">Abre la</span>
+          <span class="card card--right">invitación</span>
+        </button>
+
+        <button class="pearl-button" type="button" aria-label="Abrir la invitación">
+          <img src="assets/boton.png" alt="">
+        </button>
+      </div>
+    </section>
+
+    <p class="hint">Toca para abrir</p>
+
+    <section class="details" aria-hidden="true">
+      <button class="details__close" type="button" aria-label="Cerrar invitación">×</button>
+      <div class="details__ornament">❦</div>
+      <p class="details__eyebrow">Con mucha alegría</p>
+      <h1>Nuestra boda</h1>
+      <p class="details__copy">Muy pronto compartiremos contigo todos los detalles de este día tan especial.</p>
+      <div class="details__rule"><span>♥</span></div>
+      <p class="details__sign">Con amor</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
