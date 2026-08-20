@@ -67,7 +67,7 @@ button { font: inherit; }
   position: absolute;
   z-index: 11;
   inset: 14.1% 15.8% 14.1%;
-  overflow: hidden;
+  overflow: visible;
   border-radius: 47% 47% 45% 45% / 41% 41% 45% 45%;
 }
 
@@ -83,9 +83,9 @@ button { font: inherit; }
   position: absolute;
   z-index: 7;
   left: 13%;
-  top: 41%;
+  top: 36.5%;
   width: 78%;
-  height: 23%;
+  height: 21%;
   padding: 0;
   border: 0;
   background: transparent;
@@ -113,8 +113,8 @@ button { font: inherit; }
 }
 .card--left { left: 2%; transform: rotate(-4deg); padding-right: 10%; }
 .card--right { right: 2%; transform: rotate(4deg); padding-left: 10%; }
-.invitation-trigger:hover .card--left { transform: rotate(-6deg) translate(-2px,-2px); }
-.invitation-trigger:hover .card--right { transform: rotate(6deg) translate(2px,-2px); }
+.invitation-trigger:hover .card--left { transform: rotate(-4deg); }
+.invitation-trigger:hover .card--right { transform: rotate(4deg); }
 .invitation-trigger:focus-visible { outline: 2px solid var(--gold); outline-offset: 5px; border-radius: 40%; }
 
 .pearl-button {
