@@ -78,8 +78,8 @@ button { font: inherit; }
 .swan--left { animation: swanLeftIn 1.05s .5s cubic-bezier(.2,.82,.2,1) both; }
 .swan--right { animation: swanRightIn 1.05s .62s cubic-bezier(.2,.82,.2,1) both; }
 
-.calla { position: absolute; z-index: 6; left: 0; bottom: 3%; width: 53%; height: 82%; object-fit: contain; transform: rotate(1deg); transform-origin: bottom; filter: drop-shadow(8px 13px 8px rgba(53, 50, 36, .43)); animation: flowerIn 1.05s .9s cubic-bezier(.16,.85,.22,1) both; }
-.pearls { position: absolute; z-index: 1; width: 73%; right: -8%; bottom: 16%; transform: rotate(-10deg); mix-blend-mode: multiply; opacity: .96; filter: drop-shadow(8px 12px 8px rgba(58, 49, 41, .42)); animation: pearlsIn 1.1s 1.05s cubic-bezier(.2,.82,.2,1) both; }
+.calla { position: absolute; z-index: 6; left: -5%; bottom: 3%; width: 53%; height: 82%; object-fit: contain; transform: rotate(1deg); transform-origin: bottom; filter: drop-shadow(8px 13px 8px rgba(53, 50, 36, .43)); animation: flowerIn 1.05s .9s cubic-bezier(.16,.85,.22,1) both; }
+.pearls { position: absolute; z-index: 1; width: 73%; right: -8%; bottom: 10%; transform: rotate(-10deg); mix-blend-mode: multiply; opacity: .96; filter: drop-shadow(8px 12px 8px rgba(58, 49, 41, .42)); animation: pearlsIn 1.1s 1.05s cubic-bezier(.2,.82,.2,1) both; }
 
 .invitation-trigger {
   position: absolute;
