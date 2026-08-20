@@ -74,7 +74,7 @@ button { font: inherit; }
 .swans { position: absolute; inset: 14% 4% auto; height: 56%; z-index: 2; transform: translateX(11%); }
 .swan { position: absolute; top: 0; width: 62%; height: 100%; object-fit: contain; filter: drop-shadow(9px 13px 9px rgba(55, 45, 39, .48)); }
 .swan--left { left: -3%; }
-.swan--right { top: 0; right: -5%; }
+.swan--right { top: 4%; right: -5%; width: 59%; }
 .swan--left { animation: swanLeftIn 1.05s .5s cubic-bezier(.2,.82,.2,1) both; }
 .swan--right { animation: swanRightIn 1.05s .62s cubic-bezier(.2,.82,.2,1) both; }
 
@@ -115,9 +115,9 @@ button { font: inherit; }
   animation: letteringIn .85s 1.25s ease both;
 }
 .card--left { left: 2%; transform: rotate(-4deg); padding-right: 10%; }
-.card--right { right: 2%; transform: rotate(-11deg); padding-left: 10%; }
+.card--right { top: 7%; right: -3%; transform: rotate(-11deg) scale(.9); padding-left: 10%; }
 .invitation-trigger:hover .card--left { transform: rotate(-4deg); }
-.invitation-trigger:hover .card--right { transform: rotate(-11deg); }
+.invitation-trigger:hover .card--right { transform: rotate(-11deg) scale(.9); }
 .invitation-trigger:focus-visible { outline: 2px solid var(--gold); outline-offset: 5px; border-radius: 40%; }
 
 .pearl-button {
