@@ -83,7 +83,7 @@ button { font: inherit; }
   position: absolute;
   z-index: 7;
   left: 13%;
-  top: 42.5%;
+  top: 41%;
   width: 78%;
   height: 23%;
   padding: 0;
@@ -96,22 +96,23 @@ button { font: inherit; }
   position: absolute;
   top: 2%;
   display: grid;
-  width: 56%;
-  height: 92%;
+  width: 54%;
+  height: 88%;
   place-items: center;
   padding: 6% 7%;
-  color: #554a43;
+  color: #514842;
   font-family: "Parisienne", cursive;
   font-size: clamp(20px, 2.45vw, 38px);
   line-height: .84;
   text-align: center;
-  background: linear-gradient(145deg, #fffef9 12%, #eee9df 100%);
-  box-shadow: 0 9px 14px rgba(65, 50, 39, .16), inset 0 0 20px rgba(255,255,255,.7);
-  clip-path: polygon(8% 5%, 48% 0, 91% 8%, 100% 38%, 94% 81%, 69% 97%, 35% 100%, 8% 88%, 0 51%);
+  background: transparent;
+  filter: drop-shadow(0 1px 1px rgba(255,255,255,.9));
+  box-shadow: none;
+  clip-path: none;
   transition: transform .3s ease, filter .3s ease;
 }
-.card--left { left: 0; transform: rotate(-4deg); padding-right: 17%; }
-.card--right { right: 0; transform: rotate(4deg); padding-left: 17%; }
+.card--left { left: 2%; transform: rotate(-4deg); padding-right: 10%; }
+.card--right { right: 2%; transform: rotate(4deg); padding-left: 10%; }
 .invitation-trigger:hover .card--left { transform: rotate(-6deg) translate(-2px,-2px); }
 .invitation-trigger:hover .card--right { transform: rotate(6deg) translate(2px,-2px); }
 .invitation-trigger:focus-visible { outline: 2px solid var(--gold); outline-offset: 5px; border-radius: 40%; }
