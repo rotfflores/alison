@@ -74,7 +74,7 @@ button { font: inherit; }
 .swans { position: absolute; inset: 14% 4% auto; height: 56%; z-index: 2; transform: translateX(11%); }
 .swan { position: absolute; top: 0; width: 62%; height: 100%; object-fit: contain; filter: drop-shadow(9px 13px 9px rgba(55, 45, 39, .48)); }
 .swan--left { left: -3%; }
-.swan--right { top: 2%; right: -5%; }
+.swan--right { top: 0; right: -5%; }
 .swan--left { animation: swanLeftIn 1.05s .5s cubic-bezier(.2,.82,.2,1) both; }
 .swan--right { animation: swanRightIn 1.05s .62s cubic-bezier(.2,.82,.2,1) both; }
 
@@ -84,7 +84,7 @@ button { font: inherit; }
 .invitation-trigger {
   position: absolute;
   z-index: 7;
-  left: 17%;
+  left: 20%;
   top: 44%;
   width: 74%;
   height: 21%;
