@@ -180,9 +180,9 @@ button { font: inherit; }
 .photo-booth__flower { position: absolute; z-index: 6; left: 9%; bottom: 9%; width: 34%; height: 55%; object-fit: contain; filter: drop-shadow(6px 10px 7px rgba(53,50,36,.35)); opacity: 0; transform: translateY(45px) rotate(6deg); }
 .photo-booth__pearls { position: absolute; z-index: 5; top: 25%; right: -4%; width: 47%; object-fit: contain; filter: drop-shadow(5px 8px 6px rgba(58,49,41,.32)); opacity: 0; transform: translate(30px,-20px) rotate(-8deg); }
 
-.film-output { position: absolute; z-index: 4; top: 28%; left: 50%; width: 37%; height: 59%; overflow: hidden; transform: translateX(-50%); }
+.film-output { position: absolute; z-index: 4; top: 29.35%; left: 50%; width: 35.5%; height: 58%; overflow: hidden; transform: translateX(-50%); }
 .film-strip { position: relative; width: 100%; padding: 8px 8px 4px; background: #fbfaf6; box-shadow: 7px 12px 15px rgba(47,40,35,.3); transform: translateY(-100%); opacity: 1; }
-.photo-booth__slot-lip { position: absolute; z-index: 7; top: 27.25%; left: 33.5%; width: 43%; height: 2.4%; border: 2px solid #ac8e59; border-radius: 999px; background: linear-gradient(#f7f1e6,#e7dbc8); box-shadow: 0 3px 7px rgba(63,52,42,.28), inset 0 1px 2px rgba(255,255,255,.9); opacity: 0; }
+.photo-booth__slot-mask { position: absolute; inset: 0; z-index: 7; width: 100%; height: 100%; object-fit: contain; clip-path: inset(27.2% 27% 68.4%); opacity: 0; pointer-events: none; }
 .film-strip__photo { position: relative; width: 100%; aspect-ratio: 1.5; margin-bottom: 7px; overflow: hidden; background-image: url("assets/fotos-pareja.png?v=24"); background-repeat: no-repeat; background-size: 100% 300%; filter: contrast(1.04); }
 .film-strip__photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,255,255,.08), transparent 52%, rgba(0,0,0,.1)); }
 .film-strip__photo--one { background-position: center top; }
@@ -197,7 +197,7 @@ button { font: inherit; }
 .scene.is-open .details { opacity: 1; visibility: visible; transform: scale(1) translateY(0); }
 .scene.is-open .details__header { animation: detailHeaderIn .75s .35s ease both; }
 .scene.is-open .photo-booth__frame { animation: detailFrameIn .9s .55s cubic-bezier(.2,.85,.2,1) both; }
-.scene.is-open .photo-booth__slot-lip { animation: fadeIn .35s 1.05s ease both; }
+.scene.is-open .photo-booth__slot-mask { animation: fadeIn .35s 1.05s ease both; }
 .scene.is-open .film-strip { animation: filmEject 1.9s 1.3s cubic-bezier(.2,.78,.2,1) both; }
 .scene.is-open .photo-booth__flower { animation: detailFlowerIn .9s 2.25s ease both; }
 .scene.is-open .photo-booth__pearls { animation: detailPearlsIn .9s 2.45s ease both; }
