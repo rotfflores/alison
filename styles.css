@@ -277,13 +277,13 @@ button { font: inherit; }
   .details__cta { margin-top: -3px; }
   .invitation-composition { width: 100%; height: auto; min-height: 1080px; }
   .invitation-envelope { top: 5%; width: 65%; }
-  .invitation-flowers { left: 4%; top: 25%; width: 29%; }
+  .invitation-flowers { left: 4%; top: 25%; width: 25%; }
   .record-player { left: -7%; bottom: 40%; width: 64%; }
   .record-player__legend text { font-size: 17px; letter-spacing: 1.5px; }
-  .wedding-card { right: -2%; bottom: 22%; width: 55%; }
+  .wedding-card { right: 0; bottom: 42%; width: 52%; }
   .wedding-card__copy { inset: 22% 17% 20%; }
   .wedding-card h2 { font-size: clamp(21px,5.8vw,32px); }
-  .invitation-pearls { left: 18%; bottom: 25%; width: 36%; }
+  .invitation-pearls { left: 18%; bottom: 36%; width: 36%; }
 }
 
 @media (max-width: 390px) {
