@@ -182,7 +182,7 @@ button { font: inherit; }
 
 .film-output { position: absolute; z-index: 4; top: 29.35%; left: 50%; width: 35.5%; height: 58%; overflow: hidden; transform: translateX(-50%); }
 .film-strip { position: relative; width: 100%; padding: 8px 8px 4px; background: #fbfaf6; box-shadow: none; transform: translateY(-100%); opacity: 1; }
-.photo-booth__slot-mask { position: absolute; inset: 0; z-index: 7; width: 100%; height: 100%; object-fit: contain; clip-path: inset(27.2% 27% 68.4%); opacity: 0; pointer-events: none; }
+.photo-booth__slot-mask { position: absolute; inset: 0; z-index: 7; width: 100%; height: 100%; object-fit: contain; clip-path: inset(27.2% 27% 68.4%); filter: grayscale(.42) saturate(.58) brightness(1.09); opacity: 0; pointer-events: none; }
 .film-strip__photo { position: relative; width: 100%; aspect-ratio: 1.5; margin-bottom: 7px; overflow: hidden; background-image: url("assets/fotos-pareja.png?v=24"); background-repeat: no-repeat; background-size: 100% 300%; filter: contrast(1.04); }
 .film-strip__photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,255,255,.08), transparent 52%, rgba(0,0,0,.1)); }
 .film-strip__photo--one { background-position: center top; }
