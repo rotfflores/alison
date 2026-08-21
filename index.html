@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,500&family=Italiana&family=Parisienne&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=28">
+  <link rel="stylesheet" href="styles.css?v=29">
 </head>
 <body>
   <main class="scene">
@@ -66,8 +66,39 @@
 
       <button class="details__cta" type="button">Abrir invitación</button>
     </section>
+
+    <section class="invitation-page" aria-hidden="true">
+      <button class="invitation-page__back" type="button" aria-label="Volver a las fotografías">←</button>
+
+      <div class="invitation-composition">
+        <img class="invitation-envelope" src="assets/sobre-flores.png" alt="Sobre de boda con calas" draggable="false">
+        <img class="invitation-flowers" src="assets/calas-dobles.png" alt="" aria-hidden="true">
+
+        <div class="record-player">
+          <img class="record-player__disc" src="assets/disco.png" alt="Disco de vinilo">
+          <svg class="record-player__legend" viewBox="0 0 300 300" aria-hidden="true">
+            <defs><path id="listen-curve" d="M 43 170 A 112 112 0 0 1 257 170" /></defs>
+            <text><textPath href="#listen-curve" startOffset="50%" text-anchor="middle">CLICK PARA ESCUCHAR</textPath></text>
+          </svg>
+          <button class="record-player__button" type="button" aria-label="Reproducir música" aria-pressed="false">
+            <img src="assets/boton-play.png" alt="">
+          </button>
+        </div>
+
+        <article class="wedding-card" aria-label="Datos de la boda">
+          <img src="assets/tarjeta-encaje.png" alt="" aria-hidden="true">
+          <div class="wedding-card__copy">
+            <p class="wedding-card__eyebrow">Acompáñanos a celebrar</p>
+            <p class="wedding-card__small">la boda de</p>
+            <h2>Alison <span>&amp;</span> Mateo</h2>
+            <div class="wedding-card__flourish" aria-hidden="true"><span></span>❦<span></span></div>
+            <time datetime="2026-09-28">28 · 09 · 2026</time>
+          </div>
+        </article>
+      </div>
+    </section>
   </main>
 
-  <script src="script.js?v=28"></script>
+  <script src="script.js?v=29"></script>
 </body>
 </html>
