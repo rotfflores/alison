@@ -241,6 +241,14 @@ button { font: inherit; }
 .wedding-info-envelope__copy p { margin: .34em 0; }
 .wedding-info-envelope__copy strong { font-weight: 500; }
 .wedding-info-envelope__copy small { font-size: .75em; letter-spacing: .08em; text-transform: uppercase; }
+.invitation-footer { width: min(720px,88vw); margin: -35px auto 0; padding: 30px 20px 52px; color: #66513a; text-align: center; font-family: "Cormorant Garamond", serif; font-size: clamp(16px,1.7vw,21px); opacity: 0; transform: translateY(30px); }
+.invitation-footer__names { margin: 0 0 4px; font-family: "Parisienne", cursive; font-size: clamp(40px,6vw,68px); line-height: 1; }
+.invitation-footer__names span { display: inline-block; margin: 0 .08em; font-size: .72em; }
+.invitation-footer > p:not(.invitation-footer__names) { margin: 0; letter-spacing: .04em; }
+.invitation-footer__ornament { display: flex; width: min(310px,70%); align-items: center; gap: 12px; margin: 16px auto 10px; color: #a18251; }
+.invitation-footer__ornament span { flex: 1; height: 1px; background: linear-gradient(90deg,transparent,#a18251); }
+.invitation-footer__ornament span:last-child { background: linear-gradient(90deg,#a18251,transparent); }
+.invitation-footer time { font-family: "Italiana", serif; font-size: .75em; letter-spacing: .2em; }
 .scene.is-invitation .details { opacity: 0; visibility: hidden; transform: translateY(-5%); pointer-events: none; }
 .scene.is-invitation .invitation-page { opacity: 1; visibility: visible; transform: translateY(0); }
 .scene.is-invitation .invitation-envelope { animation: invitationEnvelopeIn 1s .25s cubic-bezier(.2,.84,.2,1) both; }
@@ -254,6 +262,7 @@ button { font: inherit; }
 .scene.is-invitation .rsvp-collage__polaroid { animation: rsvpPolaroidIn 1s 1.7s cubic-bezier(.2,.84,.2,1) both; }
 .scene.is-invitation .rsvp-collage__story { animation: rsvpStoryIn 1s 1.9s cubic-bezier(.2,.84,.2,1) both; }
 .scene.is-invitation .wedding-info-envelope { animation: weddingInfoIn 1s 2.05s cubic-bezier(.2,.84,.2,1) both; }
+.scene.is-invitation .invitation-footer { animation: invitationFooterIn .9s 2.2s ease both; }
 
 .scene.is-open .locket { transform: scale(.88); opacity: 0; filter: blur(8px); transition: opacity .45s ease, transform .6s ease, filter .45s ease; pointer-events: none; }
 .scene.is-open .hint { opacity: 0; }
@@ -300,6 +309,7 @@ button { font: inherit; }
 @keyframes rsvpPolaroidIn { to { opacity: 1; transform: translate(0,0) rotate(-8deg); } }
 @keyframes rsvpStoryIn { to { opacity: 1; transform: translate(0,0) rotate(-2deg); } }
 @keyframes weddingInfoIn { to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes invitationFooterIn { to { opacity: 1; transform: translateY(0); } }
 @keyframes recordSpin { to { transform: rotate(360deg); } }
 
 @media (max-width: 700px) {
