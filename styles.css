@@ -249,6 +249,9 @@ button { font: inherit; }
 .invitation-footer__ornament span { flex: 1; height: 1px; background: linear-gradient(90deg,transparent,#a18251); }
 .invitation-footer__ornament span:last-child { background: linear-gradient(90deg,#a18251,transparent); }
 .invitation-footer time { font-family: "Italiana", serif; font-size: .75em; letter-spacing: .2em; }
+.invitation-footer .invitation-footer__copyright { margin-top: 28px; font-family: "Italiana", serif; font-size: .56em; letter-spacing: .12em; text-transform: uppercase; opacity: .72; }
+.invitation-footer__copyright a { color: inherit; text-decoration: none; border-bottom: 1px solid rgba(102,81,58,.35); }
+.invitation-footer__copyright a:hover { border-bottom-color: currentColor; }
 .scene.is-invitation .details { opacity: 0; visibility: hidden; transform: translateY(-5%); pointer-events: none; }
 .scene.is-invitation .invitation-page { opacity: 1; visibility: visible; transform: translateY(0); }
 .scene.is-invitation .invitation-envelope { animation: invitationEnvelopeIn 1s .25s cubic-bezier(.2,.84,.2,1) both; }
