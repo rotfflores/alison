@@ -229,8 +229,8 @@ button { font: inherit; }
 .rsvp-collage img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .rsvp-collage__confirm { position: absolute; z-index: 6; top: 0; right: 0; display: block; width: 42%; aspect-ratio: 1; opacity: 0; transform: translate(45px,45px) scale(.9); filter: drop-shadow(0 15px 13px rgba(58,44,31,.23)); }
 .rsvp-collage__confirm:focus-visible { outline: 3px solid #b69151; outline-offset: 6px; border-radius: 42%; }
-.rsvp-collage__polaroid { position: absolute; z-index: 3; top: 18%; left: 0; width: 45% !important; height: auto !important; opacity: 0; transform: translate(-50px,45px) rotate(-28deg); filter: drop-shadow(0 17px 14px rgba(43,35,28,.28)); }
-.rsvp-collage__story { position: absolute; z-index: 5; top: 38%; right: -2%; width: 60% !important; height: auto !important; opacity: 0; transform: translate(50px,45px) rotate(-2deg); filter: drop-shadow(0 17px 14px rgba(54,43,34,.26)); }
+.rsvp-collage__polaroid { position: absolute; z-index: 3; top: 17%; left: -2%; width: 50% !important; height: auto !important; opacity: 0; transform: translate(-50px,45px) rotate(-14deg); filter: drop-shadow(0 17px 14px rgba(43,35,28,.28)); }
+.rsvp-collage__story { position: absolute; z-index: 5; top: 28%; right: -5%; width: 68% !important; height: auto !important; opacity: 0; transform: translate(50px,45px) rotate(-2deg); filter: drop-shadow(0 17px 14px rgba(54,43,34,.26)); }
 .scene.is-invitation .details { opacity: 0; visibility: hidden; transform: translateY(-5%); pointer-events: none; }
 .scene.is-invitation .invitation-page { opacity: 1; visibility: visible; transform: translateY(0); }
 .scene.is-invitation .invitation-envelope { animation: invitationEnvelopeIn 1s .25s cubic-bezier(.2,.84,.2,1) both; }
@@ -286,7 +286,7 @@ button { font: inherit; }
 @keyframes lowerSwansIn { to { opacity: 1; transform: translate(0,0) rotate(-3deg); } }
 @keyframes lowerPhotosIn { to { opacity: 1; transform: translate(0,0) rotate(3deg); } }
 @keyframes rsvpConfirmIn { to { opacity: 1; transform: translate(0,0) scale(1); } }
-@keyframes rsvpPolaroidIn { to { opacity: 1; transform: translate(0,0) rotate(-28deg); } }
+@keyframes rsvpPolaroidIn { to { opacity: 1; transform: translate(0,0) rotate(-14deg); } }
 @keyframes rsvpStoryIn { to { opacity: 1; transform: translate(0,0) rotate(-2deg); } }
 @keyframes recordSpin { to { transform: rotate(360deg); } }
 
@@ -312,8 +312,8 @@ button { font: inherit; }
   .lower-gallery__photos { right: 12%; }
   .rsvp-collage { width: 100%; height: 720px; margin-top: -255px; }
   .rsvp-collage__confirm { top: 0; right: -3%; width: 58%; }
-  .rsvp-collage__polaroid { top: 18%; left: -13%; width: 63% !important; }
-  .rsvp-collage__story { top: 39%; right: -8%; width: 72% !important; }
+  .rsvp-collage__polaroid { top: 17%; left: -17%; width: 70% !important; }
+  .rsvp-collage__story { top: 27%; right: -12%; width: 82% !important; }
 }
 
 @media (max-width: 390px) {
