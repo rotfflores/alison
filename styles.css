@@ -235,9 +235,9 @@ button { font: inherit; }
 @media (min-width: 901px) {
   .lower-gallery__photos { z-index: 12; }
 }
-.wedding-info-envelope { position: relative; z-index: 2; width: min(900px,96vw); aspect-ratio: 1200 / 1257; margin: 116px auto 110px; opacity: 0; transform: translateY(65px) scale(.96); filter: drop-shadow(0 22px 18px rgba(54,43,34,.22)); }
+.wedding-info-envelope { position: relative; z-index: 2; width: min(900px,96vw); aspect-ratio: 1200 / 1257; margin: 40px auto 110px; opacity: 0; transform: translateY(65px) scale(.96); filter: drop-shadow(0 22px 18px rgba(54,43,34,.22)); }
 .wedding-info-envelope > img { display: block; width: 100%; height: 100%; object-fit: contain; }
-.wedding-info-envelope__copy { position: absolute; z-index: 1; top: 17%; left: 17%; width: 66%; color: #4e3a27; text-align: center; font-family: "Cormorant Garamond", serif; font-size: clamp(18px,1.7vw,24px); line-height: 1.2; }
+.wedding-info-envelope__copy { position: absolute; z-index: 1; top: 23%; left: 17%; width: 66%; color: #4e3a27; text-align: center; font-family: "Cormorant Garamond", serif; font-size: clamp(18px,1.7vw,24px); line-height: 1.2; }
 .wedding-info-envelope__copy p { margin: .34em 0; }
 .wedding-info-envelope__copy strong { font-weight: 500; }
 .wedding-info-envelope__copy small { font-size: .75em; letter-spacing: .08em; text-transform: uppercase; }
@@ -326,8 +326,8 @@ button { font: inherit; }
   .rsvp-collage__confirm { top: 0; right: -3%; width: 58%; }
   .rsvp-collage__polaroid { top: 13%; left: -19%; width: 76% !important; }
   .rsvp-collage__story { top: 27%; right: -12%; width: 82% !important; }
-  .wedding-info-envelope { left: 7%; width: 118%; margin: -258px auto 70px; }
-  .wedding-info-envelope__copy { top: 16%; left: 16%; width: 68%; font-size: clamp(14px,4vw,17px); }
+  .wedding-info-envelope { left: -5%; width: 110%; margin: -330px 0 70px; }
+  .wedding-info-envelope__copy { top: 24%; left: 16%; width: 68%; font-size: clamp(14px,4vw,17px); }
 }
 
 @media (max-width: 390px) {
