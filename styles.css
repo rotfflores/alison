@@ -234,8 +234,17 @@ button { font: inherit; }
 
 @media (min-width: 901px) {
   .lower-gallery__photos { z-index: 12; }
-  .rsvp-collage__story { top: 36%; }
 }
+.wedding-info-envelope { position: relative; width: min(720px,92vw); aspect-ratio: 1200 / 1257; margin: -105px auto 110px; opacity: 0; transform: translateY(65px) scale(.96); filter: drop-shadow(0 22px 18px rgba(54,43,34,.22)); }
+.wedding-info-envelope > img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.wedding-info-envelope__copy { position: absolute; z-index: 1; top: 11%; left: 17%; width: 66%; color: #4e3a27; text-align: center; font-family: "Cormorant Garamond", serif; font-size: clamp(16px,1.55vw,22px); line-height: 1.18; }
+.wedding-info-envelope__eyebrow { margin: 0 0 2px; font-family: "Italiana", serif; font-size: .7em; letter-spacing: .23em; text-transform: uppercase; }
+.wedding-info-envelope h2 { margin: 0; font-family: "Parisienne", cursive; font-size: clamp(35px,5.5vw,62px); font-weight: 400; line-height: 1; }
+.wedding-info-envelope h2 span { display: inline-block; margin: 0 .08em; font-size: .72em; }
+.wedding-info-envelope__ornament { margin: 4px 0 3px; color: #a18251; }
+.wedding-info-envelope__copy p { margin: .34em 0; }
+.wedding-info-envelope__copy strong { font-weight: 500; }
+.wedding-info-envelope__copy small { font-size: .75em; letter-spacing: .08em; text-transform: uppercase; }
 .scene.is-invitation .details { opacity: 0; visibility: hidden; transform: translateY(-5%); pointer-events: none; }
 .scene.is-invitation .invitation-page { opacity: 1; visibility: visible; transform: translateY(0); }
 .scene.is-invitation .invitation-envelope { animation: invitationEnvelopeIn 1s .25s cubic-bezier(.2,.84,.2,1) both; }
@@ -248,6 +257,7 @@ button { font: inherit; }
 .scene.is-invitation .rsvp-collage__confirm { animation: rsvpConfirmIn .9s 1.55s cubic-bezier(.2,.84,.2,1) both; }
 .scene.is-invitation .rsvp-collage__polaroid { animation: rsvpPolaroidIn 1s 1.7s cubic-bezier(.2,.84,.2,1) both; }
 .scene.is-invitation .rsvp-collage__story { animation: rsvpStoryIn 1s 1.9s cubic-bezier(.2,.84,.2,1) both; }
+.scene.is-invitation .wedding-info-envelope { animation: weddingInfoIn 1s 2.05s cubic-bezier(.2,.84,.2,1) both; }
 
 .scene.is-open .locket { transform: scale(.88); opacity: 0; filter: blur(8px); transition: opacity .45s ease, transform .6s ease, filter .45s ease; pointer-events: none; }
 .scene.is-open .hint { opacity: 0; }
@@ -293,6 +303,7 @@ button { font: inherit; }
 @keyframes rsvpConfirmIn { to { opacity: 1; transform: translate(0,0) scale(1); } }
 @keyframes rsvpPolaroidIn { to { opacity: 1; transform: translate(0,0) rotate(-8deg); } }
 @keyframes rsvpStoryIn { to { opacity: 1; transform: translate(0,0) rotate(-2deg); } }
+@keyframes weddingInfoIn { to { opacity: 1; transform: translateY(0) scale(1); } }
 @keyframes recordSpin { to { transform: rotate(360deg); } }
 
 @media (max-width: 700px) {
@@ -319,6 +330,9 @@ button { font: inherit; }
   .rsvp-collage__confirm { top: 0; right: -3%; width: 58%; }
   .rsvp-collage__polaroid { top: 13%; left: -19%; width: 76% !important; }
   .rsvp-collage__story { top: 27%; right: -12%; width: 82% !important; }
+  .wedding-info-envelope { width: 94%; margin: -45px auto 70px; }
+  .wedding-info-envelope__copy { top: 10%; left: 16%; width: 68%; font-size: clamp(12px,3.6vw,16px); }
+  .wedding-info-envelope h2 { font-size: clamp(30px,10vw,42px); }
 }
 
 @media (max-width: 390px) {
