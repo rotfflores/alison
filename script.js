@@ -6,6 +6,8 @@ const invitationPage = document.querySelector('.invitation-page');
 const openInvitationButton = document.querySelector('.details__cta');
 const invitationBackButton = document.querySelector('.invitation-page__back');
 const musicButton = document.querySelector('.record-player__button');
+const weddingSong = document.querySelector('.record-player__audio');
+const songStartTime = 80;
 
 function setOpen(open) {
   scene.classList.toggle('is-open', open);
@@ -34,11 +36,37 @@ invitationBackButton.addEventListener('click', () => {
   openInvitationButton.focus();
 });
 
-musicButton.addEventListener('click', () => {
-  const playing = musicButton.getAttribute('aria-pressed') !== 'true';
-  musicButton.setAttribute('aria-pressed', String(playing));
-  musicButton.setAttribute('aria-label', playing ? 'Pausar música' : 'Reproducir música');
-  document.querySelector('.record-player').classList.toggle('is-playing', playing);
+musicButton.addEventListener('click', async () => {
+  if (weddingSong.paused) {
+    if (!weddingSong.dataset.started) {
+      if (weddingSong.readyState < 1) {
+        await new Promise((resolve) => weddingSong.addEventListener('loadedmetadata', resolve, { once: true }));
+      }
+      weddingSong.currentTime = songStartTime;
+      weddingSong.dataset.started = 'true';
+    }
+
+    try {
+      await weddingSong.play();
+      musicButton.setAttribute('aria-pressed', 'true');
+      musicButton.setAttribute('aria-label', 'Pausar música');
+      document.querySelector('.record-player').classList.add('is-playing');
+    } catch (error) {
+      console.warn('No fue posible iniciar la música.', error);
+    }
+  } else {
+    weddingSong.pause();
+    musicButton.setAttribute('aria-pressed', 'false');
+    musicButton.setAttribute('aria-label', 'Reproducir música');
+    document.querySelector('.record-player').classList.remove('is-playing');
+  }
+});
+
+weddingSong.addEventListener('ended', () => {
+  weddingSong.currentTime = songStartTime;
+  musicButton.setAttribute('aria-pressed', 'false');
+  musicButton.setAttribute('aria-label', 'Reproducir música');
+  document.querySelector('.record-player').classList.remove('is-playing');
 });
 
 document.addEventListener('keydown', (event) => {
