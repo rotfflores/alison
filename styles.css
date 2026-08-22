@@ -207,6 +207,9 @@ button { font: inherit; }
 .record-player__button img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .record-player.is-playing .record-player__disc { animation: recordSpin 8s linear infinite; }
 .record-player.is-playing .record-player__button { transform: translate(-50%,-50%) scale(.94); }
+.photo-locket { position: absolute; left: 9%; top: 55%; width: min(30%, 360px); height: auto; opacity: 0; filter: drop-shadow(0 14px 12px rgba(55,42,30,.25)); pointer-events: none; }
+.photo-locket--back { z-index: 6; }
+.photo-locket--pearls { z-index: 8; clip-path: inset(0 0 43% 0); }
 .wedding-card { position: absolute; z-index: 8; right: 2%; bottom: -32%; width: min(46%, 500px); aspect-ratio: 2 / 3; transform: translate(65px,50px) scale(.9); opacity: 0; filter: drop-shadow(0 18px 15px rgba(65,51,39,.22)); }
 .wedding-card > img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .wedding-card__copy { position: absolute; inset: 21% 18% 20%; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #4e3a2c; text-align: center; }
@@ -223,6 +226,7 @@ button { font: inherit; }
 .scene.is-invitation .invitation-envelope { animation: invitationEnvelopeIn 1s .25s cubic-bezier(.2,.84,.2,1) both; }
 .scene.is-invitation .invitation-flowers { animation: invitationFlowerIn .9s .65s ease both; }
 .scene.is-invitation .record-player { animation: invitationRecordIn 1s .8s cubic-bezier(.2,.84,.2,1) both; }
+.scene.is-invitation .photo-locket { animation: invitationLocketIn 1s .95s cubic-bezier(.2,.84,.2,1) both; }
 .scene.is-invitation .wedding-card { animation: invitationCardIn 1s 1s cubic-bezier(.2,.84,.2,1) both; }
 
 .scene.is-open .locket { transform: scale(.88); opacity: 0; filter: blur(8px); transition: opacity .45s ease, transform .6s ease, filter .45s ease; pointer-events: none; }
@@ -262,6 +266,7 @@ button { font: inherit; }
 @keyframes invitationEnvelopeIn { to { opacity: 1; transform: translate(-50%,0) scale(1); } }
 @keyframes invitationFlowerIn { to { opacity: 1; transform: translate(0,0) rotate(-8deg); } }
 @keyframes invitationRecordIn { to { opacity: 1; transform: translate(0,0) rotate(-8deg); } }
+@keyframes invitationLocketIn { from { opacity: 0; transform: translateY(55px) rotate(5deg); } to { opacity: 1; transform: translateY(0) rotate(5deg); } }
 @keyframes invitationCardIn { to { opacity: 1; transform: translate(0,0) scale(1); } }
 @keyframes recordSpin { to { transform: rotate(360deg); } }
 
@@ -276,6 +281,7 @@ button { font: inherit; }
   .invitation-envelope { top: 5%; width: 65%; }
   .invitation-flowers { left: 4%; top: 21%; width: 25%; }
   .record-player { left: -7%; bottom: 52%; width: 64%; }
+  .photo-locket { left: 4%; top: 34%; width: 60%; }
   .record-player__legend text { font-size: 17px; letter-spacing: 1.5px; }
   .wedding-card { right: -6%; bottom: 32%; width: 70%; }
   .wedding-card__copy { inset: 22% 17% 20%; }
