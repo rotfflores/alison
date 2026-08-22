@@ -192,7 +192,7 @@ button { font: inherit; }
 
 .details__cta { position: relative; z-index: 10; width: min(82vw, 430px); margin-top: -8px; padding: 12px 20px; border: 0; border-radius: 3px; color: #fff; background: linear-gradient(90deg,#a68a56,#b8a16e,#9f824f); font-family: "Italiana", serif; font-size: clamp(16px, 2vw, 22px); letter-spacing: .08em; text-transform: uppercase; box-shadow: 0 9px 18px rgba(78,61,37,.2); opacity: 0; transform: translateY(16px); }
 
-.invitation-page { position: absolute; inset: 0; z-index: 50; min-height: 100svh; overflow: auto; background: radial-gradient(ellipse at 50% 45%, #fff 0 28%, rgba(255,255,255,.72) 58%, transparent 78%), linear-gradient(112deg,#edf1ef 0%,#faf8f5 48%,#eee1ea 100%); opacity: 0; visibility: hidden; transform: translateY(5%); transition: opacity .7s ease, transform .8s cubic-bezier(.2,.85,.2,1), visibility .7s; }
+.invitation-page { position: absolute; inset: 0; z-index: 50; min-height: 100svh; overflow-x: hidden; overflow-y: auto; background: radial-gradient(ellipse at 50% 45%, #fff 0 28%, rgba(255,255,255,.72) 58%, transparent 78%), linear-gradient(112deg,#edf1ef 0%,#faf8f5 48%,#eee1ea 100%); opacity: 0; visibility: hidden; transform: translateY(5%); transition: opacity .7s ease, transform .8s cubic-bezier(.2,.85,.2,1), visibility .7s; }
 .invitation-page__back { position: fixed; z-index: 80; top: 16px; left: 18px; width: 42px; height: 42px; border: 1px solid rgba(126,105,72,.35); border-radius: 50%; background: rgba(255,255,255,.82); color: #78684f; font-size: 25px; line-height: 1; cursor: pointer; }
 .invitation-composition { position: relative; width: min(1120px, 96vw); height: min(880px, 100svh); min-height: 720px; margin: 0 auto; overflow: hidden; }
 .invitation-envelope { position: absolute; z-index: 2; top: 2%; left: 50%; width: min(36%, 405px); transform: translate(-50%,-55px) scale(.92); opacity: 0; filter: drop-shadow(0 18px 16px rgba(58,44,35,.24)); }
@@ -221,6 +221,10 @@ button { font: inherit; }
 .wedding-card__flourish { display: flex; width: 72%; align-items: center; gap: 8px; margin: 8px 0 4px; color: #8f7653; font-size: 20px; }
 .wedding-card__flourish span { flex: 1; height: 1px; background: #9c8564; }
 .wedding-card time { font-family: "Italiana", serif; font-size: clamp(12px,1.5vw,18px); letter-spacing: .12em; }
+.lower-gallery { position: relative; display: grid; grid-template-columns: 1fr 1fr; align-items: start; gap: clamp(28px,7vw,100px); width: min(940px,90vw); min-height: 680px; margin: 0 auto; padding: 35px 0 90px; }
+.lower-gallery img { display: block; width: 100%; height: min(62vw,620px); object-fit: contain; object-position: top center; opacity: 0; filter: drop-shadow(0 18px 15px rgba(54,42,33,.22)); }
+.lower-gallery__swans { transform: translate(-55px,55px) rotate(-3deg); }
+.lower-gallery__photos { transform: translate(55px,55px) rotate(3deg); }
 .scene.is-invitation .details { opacity: 0; visibility: hidden; transform: translateY(-5%); pointer-events: none; }
 .scene.is-invitation .invitation-page { opacity: 1; visibility: visible; transform: translateY(0); }
 .scene.is-invitation .invitation-envelope { animation: invitationEnvelopeIn 1s .25s cubic-bezier(.2,.84,.2,1) both; }
@@ -228,6 +232,8 @@ button { font: inherit; }
 .scene.is-invitation .record-player { animation: invitationRecordIn 1s .8s cubic-bezier(.2,.84,.2,1) both; }
 .scene.is-invitation .photo-locket { animation: invitationLocketIn 1s .95s cubic-bezier(.2,.84,.2,1) both; }
 .scene.is-invitation .wedding-card { animation: invitationCardIn 1s 1s cubic-bezier(.2,.84,.2,1) both; }
+.scene.is-invitation .lower-gallery__swans { animation: lowerSwansIn 1s 1.25s cubic-bezier(.2,.84,.2,1) both; }
+.scene.is-invitation .lower-gallery__photos { animation: lowerPhotosIn 1s 1.4s cubic-bezier(.2,.84,.2,1) both; }
 
 .scene.is-open .locket { transform: scale(.88); opacity: 0; filter: blur(8px); transition: opacity .45s ease, transform .6s ease, filter .45s ease; pointer-events: none; }
 .scene.is-open .hint { opacity: 0; }
@@ -268,6 +274,8 @@ button { font: inherit; }
 @keyframes invitationRecordIn { to { opacity: 1; transform: translate(0,0) rotate(-8deg); } }
 @keyframes invitationLocketIn { from { opacity: 0; transform: translateY(55px) rotate(5deg); } to { opacity: 1; transform: translateY(0) rotate(5deg); } }
 @keyframes invitationCardIn { to { opacity: 1; transform: translate(0,0) scale(1); } }
+@keyframes lowerSwansIn { to { opacity: 1; transform: translate(0,0) rotate(-3deg); } }
+@keyframes lowerPhotosIn { to { opacity: 1; transform: translate(0,0) rotate(3deg); } }
 @keyframes recordSpin { to { transform: rotate(360deg); } }
 
 @media (max-width: 700px) {
@@ -286,6 +294,8 @@ button { font: inherit; }
   .wedding-card { right: -10%; bottom: 35%; width: 70%; }
   .wedding-card__copy { inset: 22% 17% 20%; }
   .wedding-card h2 { font-size: clamp(21px,5.8vw,32px); }
+  .lower-gallery { gap: 8px; width: 100%; min-height: 500px; margin-top: -300px; padding: 20px 5px 70px; }
+  .lower-gallery img { height: 390px; }
 }
 
 @media (max-width: 390px) {
